@@ -16,7 +16,6 @@ class ListStudentComponent extends Component {
         this.deleteStudent = this.deleteStudent.bind(this);
     }
 
-
     deleteStudent(matriculationNumber){
         StudentService.deleteStudent(matriculationNumber).then(res => {
                 this.setState({students: this.state.students.filter(student => student.matriculationNumber !== matriculationNumber)});
@@ -38,11 +37,8 @@ class ListStudentComponent extends Component {
         );
      }
 
-
     render() {
-
         const Students = this.state.students;
-
         if (Students == undefined) {
         return <p>Failed to load data.</p>;
         }
@@ -66,10 +62,8 @@ class ListStudentComponent extends Component {
         });
 
         return (
-            
             <div>
                 <h2 className = "text-center">Student Service</h2>
-                
                 <div className = "row">
                     <button style={{marginBottom: "10px"}}  className = "btn btn-primary" onClick={this.addStudent}> Add New Student </button>
                 </div>
