@@ -1,0 +1,5 @@
+1. Please install MySQL on your system and configure it to listen to port 3306.
+
+2. Keep the default username and password as "root" and "root".
+
+3. Complete the above steps because rest api is configured in application properties file to connect to the mysql server.
